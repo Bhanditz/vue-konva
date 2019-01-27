@@ -28,8 +28,7 @@
     "build:lib": "babel src --presets=@babel/preset-env --out-dir lib",
     "clean": "rm -rf dist lib",
     "test": "karma start --single-run",
-    "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server"
+    "test:watch": "karma start --auto-watch"
   },
   "peerDependencies": {
     "konva": "^2.0.0",
