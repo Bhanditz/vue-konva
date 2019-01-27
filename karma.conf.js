@@ -8,31 +8,15 @@ module.exports = function(config) {
     basePath: '',
     frameworks: ['mocha'],
     files: [
-      'tests/*.js'
+      // Mocking must be done before tests.
+      'tests/mocking.js',
+      'tests/index-test.js'
     ],
     preprocessors: {
-      'src/**/*.js': ['webpack'],
       'tests/**/*.js': ['webpack']
     },
-
     webpack: {
-      mode: 'none',
-      externals: {
-      /*
-        konva: {
-          commonjs: 'konva',
-          commonjs2: 'konva',
-          amd: 'konva',
-          root: 'Konva'
-        },
-        vue: {
-          commonjs: 'vue',
-          commonjs2: 'vue',
-          amd: 'vue',
-          root: 'Vue'
-        }
-      */
-      }
+      mode: 'production',
     },
     reporters: ['progress'],
     port: 9876,
@@ -40,7 +24,7 @@ module.exports = function(config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['ChromeHeadless'],
-    singleRun: true,
+    singleRun: false,
     concurrency: Infinity
   })
 }
