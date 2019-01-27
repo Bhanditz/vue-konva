@@ -1,11 +1,11 @@
 var path = require('path');
 
 module.exports = {
-  mode: 'none',
+  mode: 'production',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'vue-konva.js',
+    filename: 'vue-konva.min.js',
     library: 'vueKonva',
     libraryTarget: 'umd'
   },
