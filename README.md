@@ -10,13 +10,13 @@
   </span>
 
 This fork of vue-konva changes two things:
-(1) It builds a umd package in dist/vue-konva.min.js that can be included
-    directly in the browser, for simple apps and quick prototyping.
-    (1a) It also switches from an nwb-driven build to a raw webpack build.
-    (1b) Tests are run by karma directly on a headless chrome.
-(2) It includes a change in applyNodeProps that specially handles Images.
-    (2a) If an image property is not loaded, the layer is redrawn once it is.
-    (2b) Nodes with image properties get cache()/drawHitFromCache() calls.
+ 1. It builds a umd package in dist/vue-konva.min.js that can be included
+    directly via script tag.
+     * It also switches from an nwb-driven build to a raw webpack build.
+     * Tests are run by karma directly on a headless chrome.
+ 2. It includes a change in applyNodeProps that specially handles images.
+     * If an image property is not loaded, the layer is redrawn once it is.
+     * Nodes with image properties get cache()/drawHitFromCache() calls.
 
 ![ReactKonva Logo](https://github.com/rafaesc/vue-konva/raw/master/vue-konva.png)
 
